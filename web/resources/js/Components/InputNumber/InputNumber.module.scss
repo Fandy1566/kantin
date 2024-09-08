@@ -1,0 +1,66 @@
+$input_height: 25px;
+$input_border_width: 1px;
+
+.input_number {
+    width: 70px;
+    display: flex;
+    height: $input_height;
+    align-content: center;
+    justify-content: space-between;
+    outline: $input_border_width #d1d5db solid;
+
+    & > * {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        height: inherit;
+    }
+
+    & button {
+        width: 20px;
+        color: #333;
+        cursor: pointer;
+        border-width: 1px;
+        background: #eee;
+
+        &:hover {
+            color: black;
+            background: white;
+        }
+
+        &:active {
+            color: white;
+            background: #138496;
+        }
+    }
+
+    & button:focus,
+    & input:focus {
+        border: none;
+        box-shadow: none;
+        outline: none !important;
+    }
+
+    & input {
+        border: 0;
+        padding: 0;
+        width: 30px;
+        margin: 0 2px;
+        font-size: 12px;
+        text-align: center;
+        height: $input_height;
+        /* Chrome, Safari, Edge, Opera */
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            margin: 0;
+            -webkit-appearance: none;
+        }
+
+        /* Firefox */
+        &[type="number"] {
+            -webkit-appearance: textfield; /* Safari and Chrome */
+            -moz-appearance: textfield;    /* Firefox */
+            appearance: textfield;         /* Standard */
+        }
+    }
+}

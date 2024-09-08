@@ -1,0 +1,12 @@
+nav {
+    ul > li:not(:first-child) {
+        margin-top: 0.5em;
+    }
+    ul > li > a:hover > .menuText {
+        display: inline-block;
+    }
+}
+
+.menuText {
+    display: none;
+}
